@@ -1,9 +1,9 @@
 @echo off
-REM Navigate to the script directory
-cd /d C:\projects\myproject
+REM Navigate to the batch file directory
+cd /d %~dp0
 
-REM Run Python on __init__.py
-python __init__.py
+REM Run main.py as a module (to fix import errors)
+python -m src.main
 
-REM Pause so you can see output (optional)
+REM Pause so you can see output
 pause
